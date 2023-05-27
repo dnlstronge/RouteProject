@@ -15,12 +15,12 @@ const Section: React.FC <propsForSection> = (props) => {
     }
     return (
         <div className={classes.container}>
-            <h4 onClick={handleDropDown}>{props.title}</h4>
+            <h4 className={classes.title} onClick={handleDropDown}>{props.title}</h4>
             {showDropDown && 
             <div className={classes.dropdown}>
                 {props.subheadings.map((item) => {
                     return (
-                        <h5 key={item}>{item}</h5>
+                        <h5 className={classes.subtitle} key={item}>{item}</h5>
                     )
                 })}
             </div>}
