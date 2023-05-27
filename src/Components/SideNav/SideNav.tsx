@@ -8,7 +8,7 @@ import Section from './sections/Section'
 
 const SideNav = () => {
   return (
-    <div className={classes.container}>SideNav
+    <div className={classes.container}>
       {SectionData.map((section) => {
         return (
           <Section key={section.id} title={section.heading} subheadings={section.subheadings}/>
