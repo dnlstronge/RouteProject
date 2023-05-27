@@ -2,9 +2,8 @@ import React from "react";
 import classes from "./App.module.css"
 
 
-function App() {
+const App = () => {
   return <div className={classes.container}>
-    
   </div>;
 }
 
