@@ -5,7 +5,7 @@ export type SectionDataModel = {
 } []
 
 
-export const data: SectionDataModel = [
+export const SectionData: SectionDataModel = [
     {
     id: 1,
     heading: "Bloopity test",
