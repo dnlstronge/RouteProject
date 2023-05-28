@@ -1,12 +1,14 @@
 import React from "react";
 import classes from "./App.module.css"
 import SideNav from "./Components/SideNav/SideNav"
+import Window from "./Components/Window/Window";
 
 
 const App = () => {
   return (
     <div className={classes.container}>
       <SideNav />
+      <Window />
     </div>
   )
 };
