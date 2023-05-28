@@ -15,17 +15,17 @@ export const SectionData: SectionDataModel = [
     {
         id: 2,
         heading: "Routing",
-        subheadings: ["Datamodels", "Testing it good", "expand upon"]
+        subheadings: ["Datamodels", "Testing it good", "expand upon", "Use cases"]
     }
     ,
     {
         id: 3,
         heading: "Examples",
-        subheadings: ["Working with Thunk", "Another Section", "Explain"]
+        subheadings: ["Working with Thunk", "Another Section", "Explain", "more sections", "more"]
     },
     {
         id: 4,
         heading: "Show more",
-        subheadings: ["Showcasing", "MoreTests", "Methodology"]
+        subheadings: ["Showcasing", "MoreTests", "Methodology", "Elaborate"]
     },
 ]
