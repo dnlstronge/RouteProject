@@ -7,3 +7,5 @@ const GroupTaskProject: React.FC = () => {
         <div></div>
     )
 }
+
+export default GroupTaskProject;
