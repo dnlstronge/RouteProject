@@ -13,7 +13,9 @@ const Nav = () => {
   return (
     <div className={classes.container}>
       <section className={classes.navButtons}>
-        <NavBtn text="Test click" onClick={testHandler} />
+        <NavBtn text="Projects" onClick={testHandler} />
+        <NavBtn text="About" onClick={testHandler} />
+        <NavBtn text="Contact" onClick={testHandler} />
       </section>
     </div>
   )
