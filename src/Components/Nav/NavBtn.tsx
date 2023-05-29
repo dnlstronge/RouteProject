@@ -1,8 +1,13 @@
 import React from "react";
 
-const NavBtn = () => {
+/* CONFIG: 
+props: text(button text) (String)
+onClick: (points to function) ( => void)
+*/
+
+const NavBtn: <> = (props) => {
     return (
-        <button></button>
+        <button ></button>
     )
 }
 
