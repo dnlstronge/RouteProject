@@ -12,7 +12,7 @@ type navbtnProps = {
 
 const NavBtn: React.FC <navbtnProps> = (props) => {
     return (
-        <button ></button>
+        <button onClick={props.onClick}>{props.text}</button>
     )
 }
 
