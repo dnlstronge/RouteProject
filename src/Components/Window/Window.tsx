@@ -10,7 +10,7 @@ const groupTaskData = projectData[0]
 const Window: React.FC = () => {
     return (
         <div className={classes.container}>
-            <GroupTaskProject
+            <GroupTaskProject 
                 id={groupTaskData.id}
                 name={groupTaskData.name}
                 description={groupTaskData.description}
