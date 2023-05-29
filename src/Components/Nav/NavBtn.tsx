@@ -5,7 +5,12 @@ props: text(button text) (String)
 onClick: (points to function) ( => void)
 */
 
-const NavBtn: <> = (props) => {
+type navbtnProps = {
+    text: string,
+    onClick: () => void
+}
+
+const NavBtn: React.FC <navbtnProps> = (props) => {
     return (
         <button ></button>
     )
