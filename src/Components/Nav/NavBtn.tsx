@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./NavBtn.module.css"
 
 /* CONFIG: 
 props: text(button text) (String)
@@ -12,7 +13,7 @@ type navbtnProps = {
 
 const NavBtn: React.FC <navbtnProps> = (props) => {
     return (
-        <button onClick={props.onClick}>{props.text}</button>
+        <button className={classes.btn} onClick={props.onClick}>{props.text}</button>
     )
 }
 
