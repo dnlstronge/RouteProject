@@ -27,7 +27,7 @@ const Section: React.FC<propsForSection> = (props) => {
             <h4 className={classes.title} onClick={handleDropDown}>{props.title}</h4>
             {showDropDown &&
                 <div className={classes.dropdown}>
-                    {props.subheadings.map((item) => {
+                    {props.subheadings.names.map((item) => {
                         
                         const handleDispatch = (item) => {}
                         return (
