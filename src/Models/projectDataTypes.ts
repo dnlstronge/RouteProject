@@ -1,3 +1,5 @@
+import { ActionCreatorWithoutPayload } from "@reduxjs/toolkit"
+
 export type projectDataType = 
 {
 id: number,
@@ -5,7 +7,8 @@ name: string,
 description: string,
 screenShot: string,
 liveDemo: string
-gitHub: string
+gitHub: string,
+
  } []
 
 
@@ -18,4 +21,13 @@ description: string,
 screenShot: string,
 liveDemo: string
 gitHub: string
+
 } 
+
+// subheadings object - 
+// names should correspond with dispatches
+
+export type subheadings = {
+    names: string[]
+    dispatches: string[]
+}
