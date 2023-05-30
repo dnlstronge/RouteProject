@@ -27,7 +27,3 @@ gitHub: string
 // subheadings object - 
 // names should correspond with dispatches
 
-export type subheadings = {
-    names: string[]
-    dispatches: string[]
-}
