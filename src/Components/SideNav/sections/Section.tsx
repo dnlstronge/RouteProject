@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux"
 type propsForSection = {
     key: number,
     title: string,
-    subheadings: string[]
+    subheadings: {name: string, dispatch: dispatchAction}[]
 }
 
 /* config:
@@ -22,19 +22,20 @@ const Section: React.FC<propsForSection> = (props) => {
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
+    console.log(props.subheadings)
     return (
+        
         <div className={classes.container}>
             <h4 className={classes.title} onClick={handleDropDown}>{props.title}</h4>
             {showDropDown &&
                 <div className={classes.dropdown}>
-                    {props.subheadings.names.map((item) => {
-                        
-                        const handleDispatch = (item) => {}
-                        return (
-                            
-                            <h5 className={classes.subtitle} key={item}>{item}</h5>
-                        )
-                    })}
+                 {props.subheadings.map((item) => {
+                    const handleDispatch = () => {
+                        let dispatchAction = item.dispatch
+                        dispatch(dispatchAction)
+                    }
+                    return <h4 key={item.name}>{item.name}</h4>
+                 })}
                 </div>}
         </div>
     )
