@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import sectionsSliceReducer from "./sectionsSlice";
 
 export const store = configureStore({
-    reducer: {}
+    reducer: {
+        showGroupTask: sectionsSliceReducer
+    }
 })
 
 // types:
