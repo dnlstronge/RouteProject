@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const sectionsSlice = createSlice({
+export const sectionsSlice = createSlice({
     name: "showGroupTask",
     initialState: {show: false},
     reducers: {
