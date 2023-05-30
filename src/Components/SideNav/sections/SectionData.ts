@@ -15,7 +15,7 @@ export const SectionData: SectionDataModel = [
     {
         id: 1,
         heading: "Projects",
-        subheadings: [{name: "GroupTask", dispatch: setShowGroupTask },],
+        subheadings: [ {name: "GroupTask App", dispatch: setShowGroupTask} ]
         
     },
 

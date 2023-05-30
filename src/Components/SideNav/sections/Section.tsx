@@ -1,23 +1,11 @@
 import React, { useState } from "react"
 import classes from "./Section.module.css"
 import { useDispatch } from "react-redux"
+import { sectionDataModel } from "./SectionData.ts"
 
 
-type propsForSection = {
-    key: number,
-    title: string,
-    subheadings: {name: string, dispatch: dispatchAction}[]
-}
 
-/* config:
-
-props: subheadings need a dispatch to fire in connected onclick
------> make subheadings an configurable object
-
-*/ 
-
-const Section: React.FC<propsForSection> = (props) => {
-    const dispatch = useDispatch()
+const Section: React.FC<sectionDataModel> = (props) => {
     const [showDropDown, setShowDropDown] = useState(false)
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
@@ -31,10 +19,10 @@ const Section: React.FC<propsForSection> = (props) => {
                 <div className={classes.dropdown}>
                  {props.subheadings.map((item) => {
                     const handleDispatch = () => {
-                        let dispatchAction = item.dispatch
-                        dispatch(dispatchAction)
+                        item.dispatch()
+                        console.log("dispatch issued")
                     }
-                    return <h4 key={item.name}>{item.name}</h4>
+                    return <h4 onClick={handleDispatch} key={item.name}>{item.name}</h4>
                  })}
                 </div>}
         </div>
