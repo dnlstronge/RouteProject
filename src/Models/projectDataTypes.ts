@@ -27,7 +27,7 @@ export type fetchingProjectDataType = {
     id: number,
     name: string,
     description: string,
-    screenShot: string[],
+    screenShots: string[],
     liveDemo: string,
     gitHub: string
 

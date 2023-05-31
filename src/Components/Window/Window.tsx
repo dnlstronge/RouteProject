@@ -10,6 +10,7 @@ import { fetchingProjectData } from "../Data/Projects"
 
 
 // window panel which displays section selected, get state from redux state slice
+// add props to each based on project data
 
 
 const groupTaskData = projectData[0]
@@ -30,6 +31,11 @@ const Window: React.FC = () => {
             
             <Fetching
                 id={fetchingProjectData.id}
+                name={fetchingProjectData.name}
+                description={fetchingProjectData.description}
+                screenShots={fetchingProjectData.screenShots}
+                liveDemo={fetchingProjectData.liveDemo}
+                gitHub={fetchingProjectData.gitHub}
             />
         </div>
     )
