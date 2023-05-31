@@ -11,7 +11,7 @@ const SideNav = () => {
     <div className={classes.container}>
       {SectionData.map((section) => {
         return (
-          <Section key={section.id} title={section.heading} subheadings={section.subheadings}/>
+          <Section key={section.id} heading={section.heading} subheadings={section.subheadings}/>
         )
       })}
     </div>
