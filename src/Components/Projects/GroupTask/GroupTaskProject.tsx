@@ -11,7 +11,6 @@ const GroupTaskProject: React.FC<projectDataTypeObject> = (props) => {
                     <img key={image} src={image} className={classes.image} alt="Screenshot showing landing page of app" />
                 )
             }))}
-            
             <section className={classes.description}>
                 <p className={classes.paragraph}>{props.description}</p>
                 <a className={classes.link} href={props.liveDemo} target="blank">Live Demo</a>
