@@ -30,8 +30,10 @@ const Section: React.FC<projectDataTypeObject> = (props) => {
                 <div className={classes.dropdown}>
                     {props.subheadings.map((item) => {
                         const handleDispatch = () => {
-                            item.dispatch()
+                            dispatch(item.dispatch)
                             console.log("dispatch issued")
+                            console.log(item.dispatch)
+                            console.log(checkState)
                         }
                         return <h4 className={classes.subtitle} onClick={handleDispatch} key={item.name}>{item.name}</h4>
                     })}
