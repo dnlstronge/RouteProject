@@ -5,6 +5,7 @@ import GroupTaskProject from "../Projects/GroupTask/GroupTaskProject"
 import { useSelector } from "react-redux"
 import sectionsSlice from "../../Store/sectionsSlice"
 import { RootState } from "../../Store/store"
+import Fetching from "../Projects/Fetching/Fetching"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -24,6 +25,9 @@ const Window: React.FC = () => {
                 screenShot={groupTaskData.screenShot}
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
+            />}
+            {<Fetching
+                id:
             />}
         </div>
     )

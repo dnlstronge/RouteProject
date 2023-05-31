@@ -23,8 +23,8 @@ export const SectionData: SectionDataModel = [
     {
         key: 2,
         id: 2,
-        heading: "Other",
-        subheadings: [ {name: "Food Order App", dispatch: setShowGroupTask}, {name: "Trivial", dispatch: setShowGroupTask} ]
+        heading: "Welfare Calculators",
+        subheadings: [ {name: "Universal Credit", dispatch: setShowGroupTask}, {name: "Pension Credit", dispatch: setShowGroupTask} ]
         
     },
 
