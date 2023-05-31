@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 import sectionsSlice from "../../Store/sectionsSlice"
 import { RootState } from "../../Store/store"
 import Fetching from "../Projects/Fetching/Fetching"
+import { fetchingProjectData } from "../Data/Projects"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -26,9 +27,10 @@ const Window: React.FC = () => {
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
             />}
-            {<Fetching
-                id:
-            />}
+            
+            <Fetching
+                id={fetchingProjectData.id}
+            />
         </div>
     )
 }

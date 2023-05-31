@@ -29,7 +29,7 @@ export const projectData: projectDataType  = [
 
 
 ]
-export const fetchingProject = {
+export const fetchingProjectData = {
   id: 1002,
   name: "Fetching and Api app",
   description: `I built this React app to experiment with different apis and 
