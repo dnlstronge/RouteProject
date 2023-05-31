@@ -5,6 +5,7 @@ import { SectionDataModel } from "./SectionData"
 import { projectDataTypeObject } from "../../../Models/projectDataTypes"
 import { setShowGroupTask } from "../../../Store/sectionsSlice"
 import { ActionCreatorWithoutPayload } from "@reduxjs/toolkit"
+import { RootState } from "../../../Store/store"
 
 type sectionProps = {
     key: number,
@@ -12,27 +13,22 @@ type sectionProps = {
     subheadings: {
         name: string,
         dispatch: ActionCreatorWithoutPayload
-    } []
+    }[]
 }
 
 
 const Section: React.FC<sectionProps> = (props) => {
     const dispatch = useDispatch()
-    //const checkState = useSelector((state: rootState) => state.showGroupTask)
+    const checkState = useSelector((state: RootState) => state.showGroupTask)
     const [showDropDown, setShowDropDown] = useState(false)
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
 
-    const handleButton = () => {
-        dispatch(setShowGroupTask())
-        //console.log(checkState)
-    }
-     // console.log(checkState)
+
     return (
-       
+
         <div className={classes.container}>
-             <button onClick={handleButton}>ChangeState</button>
             <h4 className={classes.title} onClick={handleDropDown}>{props.heading}</h4>
             {showDropDown &&
                 <div className={classes.dropdown}>
@@ -41,7 +37,7 @@ const Section: React.FC<sectionProps> = (props) => {
                             dispatch(item.dispatch())
                             //console.log("dispatch issued")
                             //console.log(item.dispatch)
-                            //console.log(checkState)
+                            console.log(checkState)
                         }
                         return <h4 className={classes.subtitle} onClick={handleDispatch} key={item.name}>{item.name}</h4>
                     })}

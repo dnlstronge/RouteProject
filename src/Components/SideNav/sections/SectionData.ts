@@ -17,14 +17,14 @@ export const SectionData: SectionDataModel = [
         key: 1,
         id: 1,
         heading: "Projects",
-        subheadings: [ {name: "GroupTask App", dispatch: setShowGroupTask}, {name: "GroupTask App", dispatch: setShowGroupTask} ]
+        subheadings: [ {name: "GroupTask App", dispatch: setShowGroupTask}, {name: "Fetching App", dispatch: setShowGroupTask} ]
         
     },
     {
         key: 2,
         id: 2,
         heading: "Other",
-        subheadings: [ {name: "GroupTask App", dispatch: setShowGroupTask}, {name: "GroupTask App", dispatch: setShowGroupTask} ]
+        subheadings: [ {name: "Food Order App", dispatch: setShowGroupTask}, {name: "Trivial", dispatch: setShowGroupTask} ]
         
     },
 
