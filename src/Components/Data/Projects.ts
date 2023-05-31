@@ -5,10 +5,14 @@ import { setShowGroupTask } from "../../Store/sectionsSlice"
 
 
 //images 
-import groupTaskImage from "../../Assets/ProjectScreens/GroupTask/1001a.png"
+import groupTaskImageA from "../../Assets/ProjectScreens/GroupTask/1001a.png"
+import groupTaskImageB from "../../Assets/ProjectScreens/GroupTask/1001b.png"
+import groupTaskImageC from "../../Assets/ProjectScreens/GroupTask/1001d.png"
+
 import fetchImageA from "../../Assets/ProjectScreens/FetchSite/fetch1.png"
 import fetchImageB from "../../Assets/ProjectScreens/FetchSite/fetch2.png"
 import fetchImageC from "../../Assets/ProjectScreens/FetchSite/fetch3.png"
+
 
 //  migrate data to DB w/ FB backend to begin with
 
@@ -21,7 +25,7 @@ export const projectData: projectDataType  = [
      description: 
             `Project management app built with React, allows different users to log in and exchange messages, ideas and update tasks etc.
              Uses firebase for authentication and to accommodate CRUD operations`,
-     screenShot: groupTaskImage,
+     screenShot: [groupTaskImageA, groupTaskImageB, groupTaskImageC],
      liveDemo: "https://grouptaskapp-4eccd.web.app/",
      gitHub: "https://github.com/dnlstronge/groupTask",
      

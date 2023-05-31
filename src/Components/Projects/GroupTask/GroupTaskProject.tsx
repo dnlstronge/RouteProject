@@ -6,7 +6,12 @@ import { Link } from "react-router-dom";
 const GroupTaskProject: React.FC<projectDataTypeObject> = (props) => {
     return (
         <div className={classes.container}>
-            <img src={props.screenShot} className={classes.image} alt="Screenshot showing landing page of app" />
+            {props.screenShot.map((image => {
+                return (
+                    <img key={image} src={image} className={classes.image} alt="Screenshot showing landing page of app" />
+                )
+            }))}
+            
             <section className={classes.description}>
                 <p className={classes.paragraph}>{props.description}</p>
                 <a className={classes.link} href={props.liveDemo} target="blank">Live Demo</a>
