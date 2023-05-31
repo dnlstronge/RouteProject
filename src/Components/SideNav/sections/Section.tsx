@@ -40,8 +40,8 @@ const Section: React.FC<sectionProps> = (props) => {
                         const handleDispatch = async() => {
                         
                             
-                           dispatch(resetGroupTask)
-                           dispatch(resetFetchingApp)
+                           dispatch(resetGroupTask())
+                           dispatch(resetFetchingApp())
                            dispatch(item.dispatch())
                             
                        
