@@ -3,7 +3,8 @@ import sectionsSliceReducer from "./sectionsSlice";
 
 export const store = configureStore({
     reducer: {
-        showGroupTask: sectionsSliceReducer
+        showGroupTask: sectionsSliceReducer,
+        showFetchProject: fetchingSliceReducer,
     }
 })
 
