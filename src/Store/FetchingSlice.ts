@@ -11,4 +11,5 @@ export const fetchingSlice = createSlice({
     }
 })
 export const { setShowFetchingApp } = fetchingSlice.actions
+
 export default fetchingSlice.reducer;

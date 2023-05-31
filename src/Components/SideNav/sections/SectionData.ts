@@ -1,5 +1,6 @@
 import { ActionCreatorWithoutPayload } from "@reduxjs/toolkit"
 import { setShowGroupTask } from "../../../Store/sectionsSlice"
+import { setShowFetchingApp } from "../../../Store/fetchingSlice"
 
 
 export type SectionDataModel = {
@@ -17,7 +18,7 @@ export const SectionData: SectionDataModel = [
         key: 1,
         id: 1,
         heading: "Projects",
-        subheadings: [ {name: "GroupTask App", dispatch: setShowGroupTask}, {name: "Fetching App", dispatch: setShowGroupTask} ]
+        subheadings: [ {name: "GroupTask App", dispatch: setShowGroupTask}, {name: "Fetching App", dispatch: setShowFetchingApp} ]
         
     },
     {

@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import sectionsSliceReducer from "./sectionsSlice";
+import fetchingSliceReducer from "./fetchingSlice";
 
 export const store = configureStore({
     reducer: {

@@ -20,7 +20,10 @@ type sectionProps = {
 const Section: React.FC<sectionProps> = (props) => {
     const dispatch = useDispatch()
     const checkState = useSelector((state: RootState) => state.showGroupTask)
+    const checkSecondState = useSelector((state: RootState) => state.showFetchProject )
     const [showDropDown, setShowDropDown] = useState(false)
+
+    /* Handlers */
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
@@ -38,6 +41,7 @@ const Section: React.FC<sectionProps> = (props) => {
                             //console.log("dispatch issued")
                             //console.log(item.dispatch)
                             console.log(checkState)
+                            console.log(checkSecondState)
                         }
                         return <h4 className={classes.subtitle} onClick={handleDispatch} key={item.name}>{item.name}</h4>
                     })}
