@@ -7,7 +7,7 @@ export const sectionsSlice = createSlice({
         setShowGroupTask(state) {
             state.show = !state.show
         },
-        reset(state) {
+        resetGroupTask(state) {
             state.show = false
         }
     }
@@ -15,6 +15,6 @@ export const sectionsSlice = createSlice({
 
 
 
-export const { setShowGroupTask } = sectionsSlice.actions
+export const { setShowGroupTask, resetGroupTask } = sectionsSlice.actions
 
 export default sectionsSlice.reducer;

@@ -3,9 +3,10 @@ import classes from "./Section.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { SectionDataModel } from "./SectionData"
 import { projectDataTypeObject } from "../../../Models/projectDataTypes"
-import { setShowGroupTask } from "../../../Store/sectionsSlice"
+import { resetGroupTask, setShowGroupTask } from "../../../Store/sectionsSlice"
 import { ActionCreatorWithoutPayload } from "@reduxjs/toolkit"
 import { RootState } from "../../../Store/store"
+import { resetFetchingApp } from "../../../Store/fetchingSlice"
 
 type sectionProps = {
     key: number,
@@ -36,8 +37,12 @@ const Section: React.FC<sectionProps> = (props) => {
             {showDropDown &&
                 <div className={classes.dropdown}>
                     {props.subheadings.map((item) => {
-                        const handleDispatch = () => {
-                            dispatch(item.dispatch())
+                        const handleDispatch = async() => {
+                           dispatch(resetGroupTask)
+                           dispatch(resetFetchingApp)
+                           
+                           dispatch(item.dispatch())
+                            
                             //console.log("dispatch issued")
                             //console.log(item.dispatch)
                             console.log(checkState)
