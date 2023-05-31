@@ -7,8 +7,8 @@ import { setShowGroupTask } from "../../Store/sectionsSlice"
 //images 
 import groupTaskImage from "../../Assets/ProjectScreens/GroupTask/1001a.png"
 import fetchImageA from "../../Assets/ProjectScreens/FetchSite/fetch1.png"
-import fetchImageB from "../../Assets/ProjectScreens/FetchSite/fetch1.png"
-import fetchImageC from "../../Assets/ProjectScreens/FetchSite/fetch1.png"
+import fetchImageB from "../../Assets/ProjectScreens/FetchSite/fetch2.png"
+import fetchImageC from "../../Assets/ProjectScreens/FetchSite/fetch3.png"
 
 //  migrate data to DB w/ FB backend to begin with
 

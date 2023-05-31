@@ -6,8 +6,9 @@ const Fetching: React.FC<fetchingProjectDataType> = (props) => {
     return (
         <div className={classes.container}>
             {props.screenShots.map((image) => {
+                
                 return (
-                    <img src={image} className={classes.image} alt="Screenshot showing landing page of app" />
+                    <img key={image} src={image} className={classes.image} alt="Screenshot showing landing page of app" />
                 )
             })}
             
