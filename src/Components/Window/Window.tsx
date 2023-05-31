@@ -16,6 +16,7 @@ const Window: React.FC = () => {
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask )
     return (
         <div className={classes.container}>
+            {showGroupTask.show && 
             <GroupTaskProject 
                 id={groupTaskData.id}
                 name={groupTaskData.name}
@@ -23,7 +24,7 @@ const Window: React.FC = () => {
                 screenShot={groupTaskData.screenShot}
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
-            />
+            />}
         </div>
     )
 }
