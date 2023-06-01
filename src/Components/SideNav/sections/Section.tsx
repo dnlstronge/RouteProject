@@ -30,7 +30,9 @@ const Section: React.FC<sectionProps> = (props) => {
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
-    /* Conditional/animation Style (sets subheading background color) */
+    /* Conditional/animation Style (sets subheading background color) 
+       will need new if case for each subheading added
+    */
 
     useEffect(() => {
       if(showGroupTask.show) {
