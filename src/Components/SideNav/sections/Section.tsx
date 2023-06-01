@@ -21,7 +21,6 @@ type sectionProps = {
 const Section: React.FC<sectionProps> = (props) => {
     const dispatch = useDispatch()
     const [showDropDown, setShowDropDown] = useState(false)
-    const [subHeadingClicked, setSubheadingClicked] = useState(false)
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask)
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
 
@@ -30,7 +29,8 @@ const Section: React.FC<sectionProps> = (props) => {
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
-    /* Conditional/animation Style (sets subheading background color) 
+    /* 
+       Conditional/animation Style (sets subheading background color) 
        will need new if case for each subheading added
     */
 
@@ -44,6 +44,8 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("GroupTask App")!.className = classes.subtitle
         
       } 
+
+      /* add further if cases as needed */
             
     }, [showGroupTask.show, showFetchProject.show, ])
     return (
@@ -54,8 +56,6 @@ const Section: React.FC<sectionProps> = (props) => {
                 <div className={classes.dropdown}>
                     {props.subheadings.map((item) => {
                         const handleDispatch = async () => {
-                            // conditional style
-                            setSubheadingClicked(true)
                             //reset
                             dispatch(resetGroupTask())
                             dispatch(resetFetchingApp())
