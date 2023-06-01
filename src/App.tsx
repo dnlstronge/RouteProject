@@ -6,7 +6,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 createBrowserRouter([
   { path: "/"},
-  {}
+  { path: "/about"}
+  { path: "/contact"}
 ])
 
 const App = () => {
