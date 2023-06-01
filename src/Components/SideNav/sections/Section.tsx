@@ -28,7 +28,7 @@ const Section: React.FC<sectionProps> = (props) => {
     const [showDropDown, setShowDropDown] = useState(false)
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask)
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
-
+    const showMoneyMan = useSelector((state: RootState) => state.showMoneyMan)
 
     /* Handlers */
     const handleDropDown = () => {
@@ -51,7 +51,7 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("Expense Tracker")!.className = classes.subtitle
         
       }
-      if(showFetchProject.show) {
+      if(showMoneyMan.show) {
         document.getElementById("Expense Tracker")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Fetching App")!.className = classes.subtitle
@@ -59,7 +59,7 @@ const Section: React.FC<sectionProps> = (props) => {
 
       /* add further if cases as needed */
             
-    }, [showGroupTask.show, showFetchProject.show, ])
+    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show])
     return (
 
         <div className={classes.container}>

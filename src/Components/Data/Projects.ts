@@ -1,12 +1,12 @@
 
 import { projectDataType } from "../../Models/projectDataTypes"
-import { setShowGroupTask } from "../../Store/sectionsSlice"
+
 
 
 
 //images 
 
-// frouptask
+// grouptask
 import groupTaskImageA from "../../Assets/ProjectScreens/GroupTask/1001a.png"
 import groupTaskImageB from "../../Assets/ProjectScreens/GroupTask/1001b.png"
 import groupTaskImageC from "../../Assets/ProjectScreens/GroupTask/1001d.png"

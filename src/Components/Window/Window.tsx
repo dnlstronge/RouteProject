@@ -42,7 +42,7 @@ const Window: React.FC = () => {
                 liveDemo={fetchingProjectData.liveDemo}
                 gitHub={fetchingProjectData.gitHub}
             />}
-            {showMoneyMan && 
+            {showMoneyMan.show && 
             <MoneyMan
                 id={moneyManProjectData.id}
                 name={moneyManProjectData.name}

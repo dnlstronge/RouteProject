@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const moneyManSlice = createSlice({
-    name: "MoneyMan",
+    name: "showMoneyMan",
     initialState: {show: false},
     reducers: {
         setShowMoneyMan(state) {
