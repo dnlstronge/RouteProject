@@ -6,7 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 createBrowserRouter([
   { path: "/"},
-  { path: "/about"}
+  { path: "/about"},
   { path: "/contact"}
 ])
 
