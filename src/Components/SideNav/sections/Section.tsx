@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import classes from "./Section.module.css"
 
-// redux
+//redux
 import { useDispatch, useSelector } from "react-redux"
 
 //types

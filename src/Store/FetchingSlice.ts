@@ -1,8 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
-
-
 export const fetchingSlice = createSlice({
     name: "showFetchingApp",
     initialState: {show: false},
