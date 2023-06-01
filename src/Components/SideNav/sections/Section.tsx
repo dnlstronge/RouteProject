@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import classes from "./Section.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { SectionDataModel } from "./SectionData"
@@ -21,16 +21,29 @@ type sectionProps = {
 const Section: React.FC<sectionProps> = (props) => {
     const dispatch = useDispatch()
     const [showDropDown, setShowDropDown] = useState(false)
-    const showGroupTask = useSelector((state: RootState) => state.showGroupTask )
+    const [subHeadingClicked, setSubheadingClicked] = useState(false)
+    const showGroupTask = useSelector((state: RootState) => state.showGroupTask)
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
+
 
     /* Handlers */
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
-    /* Style */
-    const subHeadingActive = showGroupTask || showFetchProject ? classes.subtitleActive : classes.subtitle
+    /* Conditional/animation Style (sets subheading background color) */
 
+    useEffect(() => {
+      if(showGroupTask.show) {
+        document.getElementById("GroupTask App")!.className = classes.subtitleActive
+        document.getElementById("Fetching App")!.className = classes.subtitle
+      } 
+      if(showFetchProject.show) {
+        document.getElementById("Fetching App")!.className = classes.subtitleActive
+        document.getElementById("GroupTask App")!.className = classes.subtitle
+        
+      } 
+            
+    }, [showGroupTask.show, showFetchProject.show, ])
     return (
 
         <div className={classes.container}>
@@ -38,14 +51,16 @@ const Section: React.FC<sectionProps> = (props) => {
             {showDropDown &&
                 <div className={classes.dropdown}>
                     {props.subheadings.map((item) => {
-                        const handleDispatch = async() => {
+                        const handleDispatch = async () => {
+                            // conditional style
+                            setSubheadingClicked(true)
                             //reset
-                           dispatch(resetGroupTask())
-                           dispatch(resetFetchingApp())
-                           //action
-                           dispatch(item.dispatch())
+                            dispatch(resetGroupTask())
+                            dispatch(resetFetchingApp())
+                            //action
+                            dispatch(item.dispatch())
                         }
-                        return <h4 className={subHeadingActive} onClick={handleDispatch} key={item.name}>{item.name}</h4>
+                        return <h4 className={classes.subtitle} id={item.name} onClick={handleDispatch} key={item.name}>{item.name}</h4>
                     })}
                 </div>}
         </div>
