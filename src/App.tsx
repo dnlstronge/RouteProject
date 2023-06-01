@@ -5,7 +5,7 @@ import Window from "./Components/Window/Window";
 import { createBrowserRouter } from "react-router-dom";
 
 createBrowserRouter([
-  {},
+  { path: "/"},
   {}
 ])
 
