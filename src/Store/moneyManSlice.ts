@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const sectionsSlice = createSlice({
-    name: "showGroupTask",
+export const moneyManSlice = createSlice({
+    name: "MoneyMan",
     initialState: {show: false},
     reducers: {
-        setShowGroupTask(state) {
+        setShowMoneyMan(state) {
             state.show = !state.show
         },
-        resetGroupTask(state) {
+        resetMoneyMan(state) {
             state.show = false
         }
     }
@@ -15,6 +15,6 @@ export const sectionsSlice = createSlice({
 
 
 
-export const { setShowGroupTask, resetGroupTask } = sectionsSlice.actions
+export const { setShowMoneyMan, resetMoneyMan } = moneyManSlice.actions
 
-export default sectionsSlice.reducer;
+export default moneyManSlice.reducer;
