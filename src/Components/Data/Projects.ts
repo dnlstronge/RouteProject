@@ -5,13 +5,19 @@ import { setShowGroupTask } from "../../Store/sectionsSlice"
 
 
 //images 
+
+// frouptask
 import groupTaskImageA from "../../Assets/ProjectScreens/GroupTask/1001a.png"
 import groupTaskImageB from "../../Assets/ProjectScreens/GroupTask/1001b.png"
 import groupTaskImageC from "../../Assets/ProjectScreens/GroupTask/1001d.png"
-
+// fetch site
 import fetchImageA from "../../Assets/ProjectScreens/FetchSite/fetch1.png"
 import fetchImageB from "../../Assets/ProjectScreens/FetchSite/fetch2.png"
 import fetchImageC from "../../Assets/ProjectScreens/FetchSite/fetch3.png"
+// moneyman
+import mmimageA from "../../Assets/ProjectScreens/MoneyMan/3001.png"
+import mmimageB from "../../Assets/ProjectScreens/MoneyMan/3002.png"
+import mmimageC from "../../Assets/ProjectScreens/MoneyMan/3003.png"
 
 
 //  migrate data to DB w/ FB backend to begin with
@@ -25,7 +31,7 @@ export const projectData: projectDataType  = [
      description: 
             `Project management app built with React, allows different users to log in and exchange messages, ideas and update tasks etc.
              Uses firebase for authentication and to accommodate CRUD operations`,
-     screenShot: [groupTaskImageA, groupTaskImageB, groupTaskImageC],
+     screenShots: [groupTaskImageA, groupTaskImageB, groupTaskImageC],
      liveDemo: "https://grouptaskapp-4eccd.web.app/",
      gitHub: "https://github.com/dnlstronge/groupTask",
      
@@ -42,4 +48,16 @@ export const fetchingProjectData = {
    screenShots: [fetchImageA, fetchImageB, fetchImageC],
    liveDemo: `https://apifetch-5ea29.web.app/`,
    gitHub: `https://github.com/dnlstronge/fetchapp`
+}
+
+export const moneyManProjectData = {
+  id: 1003,
+  name: "Expense Tracker",
+  description: `This is a simple expense tracker I built with react and using firebase services for authentication and data, 
+  It's a more developed version of a simple CRUD app or list which stores data in memory, instead this uses a DB and 
+  has user authentication in place using firebase
+  .`,
+   screenShots: [mmimageA, mmimageB, mmimageC],
+   liveDemo: `https://moneyman-99322.web.app/login`,
+   gitHub: `https://github.com/dnlstronge/React-Projects/tree/master/moneyMan`
 }

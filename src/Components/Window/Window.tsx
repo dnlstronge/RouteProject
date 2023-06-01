@@ -7,6 +7,8 @@ import sectionsSlice from "../../Store/sectionsSlice"
 import { RootState } from "../../Store/store"
 import Fetching from "../Projects/Fetching/Fetching"
 import { fetchingProjectData } from "../Data/Projects"
+import MoneyMan from "../Projects/MoneyMan/MoneyMan"
+import { moneyManProjectData } from "../Data/Projects"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -26,7 +28,7 @@ const Window: React.FC = () => {
                 id={groupTaskData.id}
                 name={groupTaskData.name}
                 description={groupTaskData.description}
-                screenShot={groupTaskData.screenShot}
+                screenShots={groupTaskData.screenShots}
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
             />}
@@ -39,6 +41,13 @@ const Window: React.FC = () => {
                 liveDemo={fetchingProjectData.liveDemo}
                 gitHub={fetchingProjectData.gitHub}
             />}
+            <MoneyMan
+                id={moneyManProjectData.id}
+                name={moneyManProjectData.name}
+                description={moneyManProjectData.description}
+                screenShots={moneyManProjectData.screenShots}
+                liveDemo={moneyManProjectData.liveDemo}
+                gitHub={moneyManProjectData.gitHub} />
         </div>
     )
 }

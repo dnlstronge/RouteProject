@@ -38,12 +38,19 @@ const Section: React.FC<sectionProps> = (props) => {
       if(showGroupTask.show) {
         document.getElementById("GroupTask App")!.className = classes.subtitleActive
         document.getElementById("Fetching App")!.className = classes.subtitle
+        document.getElementById("Expense Tracker")!.className = classes.subtitle
       } 
       if(showFetchProject.show) {
         document.getElementById("Fetching App")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
+        document.getElementById("Expense Tracker")!.className = classes.subtitle
         
-      } 
+      }
+      if(showFetchProject.show) {
+        document.getElementById("Expense Tracker")!.className = classes.subtitleActive
+        document.getElementById("GroupTask App")!.className = classes.subtitle
+        document.getElementById("Fetching App")!.className = classes.subtitle
+      }
 
       /* add further if cases as needed */
             

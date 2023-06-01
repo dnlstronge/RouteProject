@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./GroupTaskProject.module.css"
+import classes from "./MoneyMan.module.css"
 import { projectDataTypeObject } from "../../../Models/projectDataTypes"; // props type
-import { Link } from "react-router-dom";
 
-const GroupTaskProject: React.FC<projectDataTypeObject> = (props) => {
+
+const MoneyMan: React.FC<projectDataTypeObject> = (props) => {
     return (
         <div className={classes.container}>
             {props.screenShots.map((image => {
@@ -20,4 +20,4 @@ const GroupTaskProject: React.FC<projectDataTypeObject> = (props) => {
     )
 }
 
-export default GroupTaskProject;
+export default MoneyMan;
