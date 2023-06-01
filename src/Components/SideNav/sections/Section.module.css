@@ -19,6 +19,9 @@
     color: grey;
     border-bottom: 1px solid white;
 }
+.subtitleActive {
+    background: rgb(103, 97, 97);
+}
 .subtitle:hover {
     cursor: pointer;
 }

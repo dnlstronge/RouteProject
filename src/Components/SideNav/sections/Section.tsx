@@ -21,12 +21,15 @@ type sectionProps = {
 const Section: React.FC<sectionProps> = (props) => {
     const dispatch = useDispatch()
     const [showDropDown, setShowDropDown] = useState(false)
+    const showGroupTask = useSelector((state: RootState) => state.showGroupTask )
+    const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
 
     /* Handlers */
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
     }
-
+    /* Style */
+    const subHeadingActive = showGroupTask || showFetchProject ? classes.subtitleActive : classes.subtitle
 
     return (
 
@@ -42,7 +45,7 @@ const Section: React.FC<sectionProps> = (props) => {
                            //action
                            dispatch(item.dispatch())
                         }
-                        return <h4 className={classes.subtitle} onClick={handleDispatch} key={item.name}>{item.name}</h4>
+                        return <h4 className={subHeadingActive} onClick={handleDispatch} key={item.name}>{item.name}</h4>
                     })}
                 </div>}
         </div>
