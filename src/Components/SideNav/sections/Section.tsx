@@ -57,7 +57,7 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("Fetching App")!.className = classes.subtitle
       }
 
-      /* add further if cases as needed */
+      /* add further IF cases as needed */
             
     }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show])
     return (
