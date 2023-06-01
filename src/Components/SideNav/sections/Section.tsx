@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react"
 import classes from "./Section.module.css"
+
+// redux
 import { useDispatch, useSelector } from "react-redux"
-import { SectionDataModel } from "./SectionData"
-import { projectDataTypeObject } from "../../../Models/projectDataTypes"
-import { resetGroupTask, setShowGroupTask } from "../../../Store/sectionsSlice"
+
+//types
 import { ActionCreatorWithoutPayload } from "@reduxjs/toolkit"
 import { RootState } from "../../../Store/store"
+
+//resets
+import { resetGroupTask } from "../../../Store/sectionsSlice"
 import { resetFetchingApp } from "../../../Store/fetchingSlice"
+import { resetMoneyMan } from "../../../Store/moneyManSlice"
 
 type sectionProps = {
     key: number,
@@ -63,10 +68,11 @@ const Section: React.FC<sectionProps> = (props) => {
                 <div className={classes.dropdown}>
                     {props.subheadings.map((item) => {
                         const handleDispatch = async () => {
-                            //reset
+                            // - reset
                             dispatch(resetGroupTask())
                             dispatch(resetFetchingApp())
-                            //action
+                            dispatch(resetMoneyMan())
+                            // - action
                             dispatch(item.dispatch())
                         }
                         return <h4 className={classes.subtitle} id={item.name} onClick={handleDispatch} key={item.name}>{item.name}</h4>

@@ -20,6 +20,7 @@ const groupTaskData = projectData[0]
 const Window: React.FC = () => {
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask )
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
+    const showMoneyMan = useSelector((state: RootState ) => state.showMoneyMan)
 
     return (
         <div className={classes.container}>
@@ -41,13 +42,14 @@ const Window: React.FC = () => {
                 liveDemo={fetchingProjectData.liveDemo}
                 gitHub={fetchingProjectData.gitHub}
             />}
+            {showMoneyMan && 
             <MoneyMan
                 id={moneyManProjectData.id}
                 name={moneyManProjectData.name}
                 description={moneyManProjectData.description}
                 screenShots={moneyManProjectData.screenShots}
                 liveDemo={moneyManProjectData.liveDemo}
-                gitHub={moneyManProjectData.gitHub} />
+                gitHub={moneyManProjectData.gitHub} /> }
         </div>
     )
 }
