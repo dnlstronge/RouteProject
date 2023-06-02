@@ -12,7 +12,7 @@ import { RootState } from "../../../Store/store"
 import { resetGroupTask } from "../../../Store/sectionsSlice"
 import { resetFetchingApp } from "../../../Store/fetchingSlice"
 import { resetMoneyMan } from "../../../Store/moneyManSlice"
-import { resetUCcalc } from "../../../Store/UCcalcSlice"
+import { resetUCcalc, setShowUCcalc } from "../../../Store/UCcalcSlice"
 
 type sectionProps = {
     key: number,
@@ -30,10 +30,14 @@ const Section: React.FC<sectionProps> = (props) => {
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask)
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
     const showMoneyMan = useSelector((state: RootState) => state.showMoneyMan)
+    const showUcCalc = useSelector((state: RootState) => state.showUCcalc)
 
     /* Handlers */
     const handleDropDown = () => {
         setShowDropDown(!showDropDown)
+        dispatch(resetGroupTask())
+        dispatch(resetFetchingApp())
+        dispatch(resetMoneyMan())
     }
     /* 
        Conditional/animation Style (sets subheading background color) 
@@ -45,22 +49,23 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("GroupTask App")!.className = classes.subtitleActive
         document.getElementById("Fetching App")!.className = classes.subtitle
         document.getElementById("Expense Tracker")!.className = classes.subtitle
+        //document.getElementById("Universal Credit")!.className = classes.subtitle
       } 
       if(showFetchProject.show) {
         document.getElementById("Fetching App")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Expense Tracker")!.className = classes.subtitle
+        //document.getElementById("Universal Credit")!.className = classes.subtitle
         
       }
       if(showMoneyMan.show) {
         document.getElementById("Expense Tracker")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Fetching App")!.className = classes.subtitle
+        //document.getElementById("Universal Credit")!.className = classes.subtitle
       }
-
-      /* add further IF cases as needed */
             
-    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show])
+    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show, showUcCalc.show])
     return (
 
         <div className={classes.container}>
@@ -73,7 +78,7 @@ const Section: React.FC<sectionProps> = (props) => {
                             dispatch(resetGroupTask())
                             dispatch(resetFetchingApp())
                             dispatch(resetMoneyMan())
-                            dispatch(resetUCcalc)
+                           
                             // - action
                             dispatch(item.dispatch())
                         }

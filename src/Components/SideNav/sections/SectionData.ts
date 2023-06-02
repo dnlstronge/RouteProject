@@ -28,15 +28,15 @@ export const SectionData: SectionDataModel = [
             {name: "Expense Tracker", dispatch: setShowMoneyMan } ]
         
     },
-    {
-        key: 2,
-        id: 2,
-        heading: "Welfare Calculators",
-        subheadings: [
-             {name: "Universal Credit", dispatch: setShowUCcalc}, 
-             {name: "Pension Credit", dispatch: setShowGroupTask} ]
+    // {
+    //     key: 2,
+    //     id: 2,
+    //     heading: "Welfare Calculators",
+    //     subheadings: [
+    //          {name: "Universal Credit", dispatch: setShowUCcalc}, 
+    //          {name: "Pension Credit", dispatch: setShowGroupTask} ]
         
-    },
+    // },
 
    
 ]
