@@ -71,6 +71,7 @@ const Window: React.FC = () => {
                 icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
                 />
                  }
+            
         </div>
     )
 }
