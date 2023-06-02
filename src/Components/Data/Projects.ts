@@ -67,7 +67,7 @@ export const moneyManProjectData = {
    gitHub: `https://github.com/dnlstronge/React-Projects/tree/master/moneyMan`
 }
 
-export const universalCreditCalc = {
+export const universalCreditCalcData = {
   id: 2001,
   name: "UC calculator",
   description: `Universal Credit calculator: one of a series of welfare benefit reckoners I have build to work out entitlement. It's front-end logic takes

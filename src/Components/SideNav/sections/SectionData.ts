@@ -4,6 +4,7 @@ import { ActionCreatorWithoutPayload } from "@reduxjs/toolkit"
 import { setShowGroupTask } from "../../../Store/sectionsSlice"
 import { setShowFetchingApp } from "../../../Store/fetchingSlice"
 import { setShowMoneyMan } from "../../../Store/moneyManSlice"
+import { setShowUCcalc } from "../../../Store/UCcalcSlice"
 
 
 export type SectionDataModel = {
@@ -31,7 +32,9 @@ export const SectionData: SectionDataModel = [
         key: 2,
         id: 2,
         heading: "Welfare Calculators",
-        subheadings: [ {name: "Universal Credit", dispatch: setShowGroupTask}, {name: "Pension Credit", dispatch: setShowGroupTask} ]
+        subheadings: [
+             {name: "Universal Credit", dispatch: setShowUCcalc}, 
+             {name: "Pension Credit", dispatch: setShowGroupTask} ]
         
     },
 

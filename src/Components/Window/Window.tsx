@@ -8,6 +8,9 @@ import Fetching from "../Projects/Fetching/Fetching"
 import { fetchingProjectData } from "../Data/Projects"
 import MoneyMan from "../Projects/MoneyMan/MoneyMan"
 import { moneyManProjectData } from "../Data/Projects"
+import UCcalc from "../Projects/WACalcs/UCcalc"
+import { universalCreditCalcData } from "../Data/Projects"
+
 
 
 // import ICONS from master
@@ -26,6 +29,7 @@ import {
     } from "../Icons/icons"
 
 
+
 // window panel which displays section selected, get state from redux state slice
 // add props to each based on project data
 
@@ -36,6 +40,7 @@ const Window: React.FC = () => {
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask )
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
     const showMoneyMan = useSelector((state: RootState ) => state.showMoneyMan)
+    const showUCcalc = useSelector((state: RootState) => state.showUCcalc)
 
     return (
         <div className={classes.container}>
@@ -71,7 +76,16 @@ const Window: React.FC = () => {
                 icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
                 />
                  }
-            
+            {showUCcalc.show && 
+            <UCcalc
+                id={universalCreditCalcData.id}
+                name={universalCreditCalcData.name}
+                description={universalCreditCalcData.description}
+                screenShots={universalCreditCalcData.screenShots}
+                liveDemo={universalCreditCalcData.liveDemo}
+                gitHub={universalCreditCalcData.gitHub}
+                icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
+                /> }
         </div>
     )
 }

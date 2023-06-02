@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./UCcalc.module.css"
+import { projectDataTypeObject } from "../../../Models/projectDataTypes";
 
 const UCcalc: React.FC<projectDataTypeObject> = (props) => {
     return (
