@@ -35,13 +35,14 @@ const WelfareCalcs = () => {
         setUcActive(true)
         dispatch(setShowUCcalc())
     }
+    const ucActiveStyle = ucActive ? classes.subtitleActive : classes.subtitle
     return (
         <div className={classes.container}>
             <h4 onClick={handleDropDown} className={classes.title}>Welfare Calculators</h4>
 
             {showCalcs && 
             <>
-                <h4 onClick={handleUCActive} className={classes.subtitle}>Universal Credit</h4>
+                <h4 onClick={handleUCActive} className={ucActiveStyle}>Universal Credit</h4>
                 <h4 className={classes.subtitle}>Pension Credit</h4>
                 <h4 className={classes.subtitle}>Other</h4>
             </>}
