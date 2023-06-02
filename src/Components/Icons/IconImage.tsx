@@ -5,11 +5,20 @@ import React from "react"
     height: ""
     width: ""
     source: ""
-    Color: ""
+    color: ""
 */
-const IconImage = () => {
+
+type imageIconsProps = {
+    height: string,
+    width: string,
+    source: string,
+    color: string
+}
+const IconImage: React.FC<imageIconsProps> = (props) => {
     return (
-        <image src={} alt={} />
+        <image 
+        style=""
+        src={props.source} alt="Thumbnail of icon" />
     )
 }
-export default IconImage
+export default IconImage;
