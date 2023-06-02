@@ -9,6 +9,7 @@ import Fetching from "../Projects/Fetching/Fetching"
 import { fetchingProjectData } from "../Data/Projects"
 import MoneyMan from "../Projects/MoneyMan/MoneyMan"
 import { moneyManProjectData } from "../Data/Projects"
+import { FaBeer } from "react-icons/fa"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -24,6 +25,7 @@ const Window: React.FC = () => {
 
     return (
         <div className={classes.container}>
+            <FaBeer color="white" />
             {showGroupTask.show && 
             <GroupTaskProject 
                 id={groupTaskData.id}
