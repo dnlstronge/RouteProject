@@ -58,6 +58,7 @@ const Window: React.FC = () => {
                 screenShots={fetchingProjectData.screenShots}
                 liveDemo={fetchingProjectData.liveDemo}
                 gitHub={fetchingProjectData.gitHub}
+                icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
             />}
             {showMoneyMan.show && 
             <MoneyMan

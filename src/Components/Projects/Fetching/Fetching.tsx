@@ -17,6 +17,13 @@ const Fetching: React.FC<fetchingProjectDataType> = (props) => {
                 <a className={classes.link} href={props.liveDemo} target="blank">Live Demo</a>
                 <a className={classes.link} href={props.gitHub} target="blank">Github page</a>
             </section>
+            <section className={classes.iconsSection}>
+                {props.icons.map((icon) => {
+                    return (
+                        icon
+                    )
+                })}
+            </section>
         </div>
     )
 }

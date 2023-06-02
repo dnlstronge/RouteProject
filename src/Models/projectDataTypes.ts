@@ -30,7 +30,8 @@ export type fetchingProjectDataType = {
     description: string,
     screenShots: string[],
     liveDemo: string,
-    gitHub: string
+    gitHub: string,
+    icons: React.JSX.Element []
 
 }
 
