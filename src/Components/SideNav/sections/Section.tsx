@@ -49,20 +49,20 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("GroupTask App")!.className = classes.subtitleActive
         document.getElementById("Fetching App")!.className = classes.subtitle
         document.getElementById("Expense Tracker")!.className = classes.subtitle
-        //document.getElementById("Universal Credit")!.className = classes.subtitle
+      
       } 
       if(showFetchProject.show) {
         document.getElementById("Fetching App")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Expense Tracker")!.className = classes.subtitle
-        //document.getElementById("Universal Credit")!.className = classes.subtitle
+   
         
       }
       if(showMoneyMan.show) {
         document.getElementById("Expense Tracker")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Fetching App")!.className = classes.subtitle
-        //document.getElementById("Universal Credit")!.className = classes.subtitle
+      
       }
             
     }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show, showUcCalc.show])
