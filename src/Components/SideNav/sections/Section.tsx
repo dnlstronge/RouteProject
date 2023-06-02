@@ -78,7 +78,7 @@ const Section: React.FC<sectionProps> = (props) => {
                             dispatch(resetGroupTask())
                             dispatch(resetFetchingApp())
                             dispatch(resetMoneyMan())
-                           
+                            dispatch(resetUCcalc())
                             // - action
                             dispatch(item.dispatch())
                         }
