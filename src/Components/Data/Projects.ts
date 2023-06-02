@@ -4,7 +4,8 @@ import { projectDataType } from "../../Models/projectDataTypes"
 
 
 
-//images 
+//images & type 
+
 
 // grouptask
 import groupTaskImageA from "../../Assets/ProjectScreens/GroupTask/1001a.png"
@@ -18,6 +19,10 @@ import fetchImageC from "../../Assets/ProjectScreens/FetchSite/fetch3.png"
 import mmimageA from "../../Assets/ProjectScreens/MoneyMan/3001.png"
 import mmimageB from "../../Assets/ProjectScreens/MoneyMan/3002.png"
 import mmimageC from "../../Assets/ProjectScreens/MoneyMan/3003.png"
+// UC calc
+import ucImageA from "../../Assets/ProjectScreens/UCcalc/uc001.png"
+import ucImageB from "../../Assets/ProjectScreens/UCcalc/uc002.png"
+import ucImageC from "../../Assets/ProjectScreens/UCcalc/uc003.png"
 
 
 //  migrate data to DB w/ FB backend to begin with
@@ -67,8 +72,9 @@ export const universalCreditCalc = {
   name: "UC calculator",
   description: `Universal Credit calculator: one of a series of welfare benefit reckoners I have build to work out entitlement. It's front-end logic takes
    user input and provides an estimate based on the claimants circumstances, I built this with primarily with React JS`,
-  screenShots: [mmimageA, mmimageB, mmimageC],
+  screenShots: [ucImageA, ucImageB, ucImageC],
   liveDemo: `https://uccalc-11c98.web.app/`,
-  gitHub: `https://github.com/dnlstronge/benefitscalc2`
+  gitHub: `https://github.com/dnlstronge/benefitscalc2`,
+
   
 }
