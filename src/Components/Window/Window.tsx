@@ -12,7 +12,18 @@ import { moneyManProjectData } from "../Data/Projects"
 
 // import ICONS from master
 
-import { reactICON, cssICON, html5ICON, javaScriptICON } from "../Icons/icons"
+import { 
+        reactICON, 
+        cssICON,
+        html5ICON, 
+        typeScriptICON,
+        nodeICON, 
+        javaScriptICON,
+        gitICON,
+        gitHubICON,
+        firebaseICON,
+    
+    } from "../Icons/icons"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -37,7 +48,7 @@ const Window: React.FC = () => {
                 screenShots={groupTaskData.screenShots}
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
-                icons={[reactICON, cssICON, html5ICON]}
+                icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
             />}
             {showFetchProject.show && 
             <Fetching
