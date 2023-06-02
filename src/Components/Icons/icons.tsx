@@ -29,15 +29,15 @@ const colorGithub = `rgb(255, 255, 255)` // white
 
 
 export const projectIcons = {
-  react: <FaReact color={colorReact}/>,
-  css: <BsFiletypeCss color={colorCSS}/>,
-  html5: <AiOutlineHtml5 color={colorTypes}/>,
-  typescript: <TbBrandTypescript color={colorHtml}/>,
-  node: <FaNodeJs color={colorNode}/>,
-  javascript: <IoLogoJavascript color={colorJS}/>,
-  git: <FaGitAlt color={colorGit}/>,
-  github: <VscGithub color={colorGithub}/>,
-  firebase: < IoLogoFirebase color={colorFireB}/>
+  react: <FaReact color={colorReact} size="4rem"/>,
+  css: <BsFiletypeCss color={colorCSS} size="4rem" />,
+  html5: <AiOutlineHtml5 color={colorTypes} size="4rem"/>,
+  typescript: <TbBrandTypescript color={colorHtml} size="4rem"/>,
+  node: <FaNodeJs color={colorNode} size="4rem"/>,
+  javascript: <IoLogoJavascript color={colorJS} size="4rem"/>,
+  git: <FaGitAlt color={colorGit} size="4rem"/>,
+  github: <VscGithub color={colorGithub} size="4rem"/>,
+  firebase: < IoLogoFirebase color={colorFireB} size="4rem"/>
 
 };
 

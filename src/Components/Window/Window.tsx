@@ -3,17 +3,16 @@ import classes from "./Window.module.css"
 import { projectData } from "../Data/Projects"
 import GroupTaskProject from "../Projects/GroupTask/GroupTaskProject"
 import { useSelector } from "react-redux"
-import sectionsSlice from "../../Store/sectionsSlice"
 import { RootState } from "../../Store/store"
 import Fetching from "../Projects/Fetching/Fetching"
 import { fetchingProjectData } from "../Data/Projects"
 import MoneyMan from "../Projects/MoneyMan/MoneyMan"
 import { moneyManProjectData } from "../Data/Projects"
-import { FaBeer } from "react-icons/fa"
+
 
 // import ICONS from master
 
-import { reactICON, cssICON, html5ICON } from "../Icons/icons"
+import { reactICON, cssICON, html5ICON, javaScriptICON } from "../Icons/icons"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -29,7 +28,7 @@ const Window: React.FC = () => {
 
     return (
         <div className={classes.container}>
-            <FaBeer color="white" />
+       
             {showGroupTask.show && 
             <GroupTaskProject 
                 id={groupTaskData.id}
