@@ -14,12 +14,14 @@ const WelfareCalcs = () => {
     
     const [showCalcs, setShowCalcs] = useState(false)
     const [ucActive, setUcActive] = useState(false)
+    const [pcActive, setPcActive] = useState(false)
     const dispatch = useDispatch()
 
 
     /* Handlers  */
     const handleDropDown = () => {
         setUcActive(false)
+        setPcActive(false)
         dispatch(resetFetchingApp())
         dispatch(resetGroupTask())
         dispatch(resetMoneyMan())
@@ -31,13 +33,23 @@ const WelfareCalcs = () => {
         dispatch(resetFetchingApp())
         dispatch(resetGroupTask())
         dispatch(resetMoneyMan())
+        setPcActive(false)
         setUcActive(true)
         dispatch(setShowUCcalc())
     }
-
+    const handlePCActive = () => {
+        dispatch(resetFetchingApp())
+        dispatch(resetGroupTask())
+        dispatch(resetMoneyMan())
+        setUcActive(false)
+        setPcActive(true)
+        dispatch(setShowUCcalc())
+    }
 
     /* dynamic styles */
     const ucActiveStyle = ucActive ? classes.subtitleActive : classes.subtitle
+    const pcActiveStyle = pcActive ? classes.subtitleActive : classes.subtitle
+
     return (
         <div className={classes.container}>
             <h4 onClick={handleDropDown} className={classes.title}>Welfare Calculators</h4>
@@ -45,7 +57,7 @@ const WelfareCalcs = () => {
             {showCalcs && 
             <>
                 <h4 onClick={handleUCActive} className={ucActiveStyle}>Universal Credit</h4>
-                <h4 className={classes.subtitle}>Pension Credit</h4>
+                <h4 onClick={handlePCActive} className={pcActiveStyle}>Pension Credit</h4>
                 <h4 className={classes.subtitle}>Other</h4>
             </>}
         </div>
