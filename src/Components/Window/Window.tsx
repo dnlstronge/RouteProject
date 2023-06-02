@@ -11,6 +11,10 @@ import MoneyMan from "../Projects/MoneyMan/MoneyMan"
 import { moneyManProjectData } from "../Data/Projects"
 import { FaBeer } from "react-icons/fa"
 
+// import ICONS from master
+
+import { react, css, html5 } from "../Icons/icons"
+
 
 // window panel which displays section selected, get state from redux state slice
 // add props to each based on project data
@@ -34,6 +38,7 @@ const Window: React.FC = () => {
                 screenShots={groupTaskData.screenShots}
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
+                icons={[react, css, html5]}
             />}
             {showFetchProject.show && 
             <Fetching

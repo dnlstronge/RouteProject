@@ -24,12 +24,11 @@ const colorHtml = `rgb(250, 166, 9)` // orange
 const colorJS = `rgb(106, 148, 206);` // bluey
 const colorNode = `rgb(71, 176, 71)` // light green
 const colorGit = `rgb(211, 140, 8)` // darker orange
-const colorPs = `rgb(141, 182, 225)` // light blue
 const colorFireB = ` rgb(248, 184, 65)` // lighter orange
 const colorGithub = `rgb(255, 255, 255)` // white
 
 
-const icons = {
+export const projectIcons = {
   react: <FaReact color={colorReact}/>,
   css: <BsFiletypeCss color={colorCSS}/>,
   html5: <AiOutlineHtml5 color={colorTypes}/>,
@@ -41,3 +40,14 @@ const icons = {
   firebase: < IoLogoFirebase color={colorFireB}/>
 
 };
+
+// individual icons export so can be used individually
+export const reactICON = projectIcons.react
+export const cssICON = projectIcons.css
+export const html5ICON = projectIcons.html5
+export const typeScriptICONS = projectIcons.typescript 
+export const nodeICON = projectIcons.node
+export const javaScriptICON = projectIcons.javascript
+export const gitICON = projectIcons.git
+export const gitHubICON = projectIcons.github
+export const firebaseICONS = projectIcons.firebase
