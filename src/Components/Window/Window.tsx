@@ -66,7 +66,10 @@ const Window: React.FC = () => {
                 description={moneyManProjectData.description}
                 screenShots={moneyManProjectData.screenShots}
                 liveDemo={moneyManProjectData.liveDemo}
-                gitHub={moneyManProjectData.gitHub} /> }
+                gitHub={moneyManProjectData.gitHub}
+                icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
+                />
+                 }
         </div>
     )
 }
