@@ -21,6 +21,7 @@ description: string,
 screenShots: string[],
 liveDemo: string
 gitHub: string
+icons: React.JSX.Element []
 
 } 
 export type fetchingProjectDataType = {

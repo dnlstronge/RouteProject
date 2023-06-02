@@ -13,7 +13,7 @@ import { FaBeer } from "react-icons/fa"
 
 // import ICONS from master
 
-import { react, css, html5 } from "../Icons/icons"
+import { reactICON, cssICON, html5ICON } from "../Icons/icons"
 
 
 // window panel which displays section selected, get state from redux state slice
@@ -38,7 +38,7 @@ const Window: React.FC = () => {
                 screenShots={groupTaskData.screenShots}
                 liveDemo={groupTaskData.liveDemo}
                 gitHub={groupTaskData.gitHub}
-                icons={[react, css, html5]}
+                icons={[reactICON, cssICON, html5ICON]}
             />}
             {showFetchProject.show && 
             <Fetching
