@@ -14,7 +14,6 @@ const WelfareCalcs = () => {
     
     const [showCalcs, setShowCalcs] = useState(false)
     const [ucActive, setUcActive] = useState(false)
-    
     const dispatch = useDispatch()
 
 
@@ -35,6 +34,9 @@ const WelfareCalcs = () => {
         setUcActive(true)
         dispatch(setShowUCcalc())
     }
+
+
+    /* dynamic styles */
     const ucActiveStyle = ucActive ? classes.subtitleActive : classes.subtitle
     return (
         <div className={classes.container}>
