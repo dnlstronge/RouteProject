@@ -1,14 +1,18 @@
 import React, {useState} from "react";
 import classes from "./WelfareCalcs.module.css"
+
+
+/* REDUX actions and resets */
 import { useDispatch } from "react-redux";
 import { resetFetchingApp } from "../../../Store/fetchingSlice";
 import { resetGroupTask } from "../../../Store/sectionsSlice";
 import { resetMoneyMan } from "../../../Store/moneyManSlice";
 import { resetUCcalc, setShowUCcalc } from "../../../Store/ucCalcSlice";
+import { resetPCcalc, setShowPCcalc } from "../../../Store/pcCalcSlice";
 
 
 
-//  - handle state locally - 
+//  - handle state locally for styling- 
 
 const WelfareCalcs = () => {
     
@@ -33,6 +37,7 @@ const WelfareCalcs = () => {
         dispatch(resetFetchingApp())
         dispatch(resetGroupTask())
         dispatch(resetMoneyMan())
+        dispatch(resetPCcalc)
         setPcActive(false)
         setUcActive(true)
         dispatch(setShowUCcalc())
@@ -41,9 +46,10 @@ const WelfareCalcs = () => {
         dispatch(resetFetchingApp())
         dispatch(resetGroupTask())
         dispatch(resetMoneyMan())
+        dispatch(resetUCcalc())
         setUcActive(false)
         setPcActive(true)
-        dispatch(setShowUCcalc())
+        dispatch(setShowPCcalc())
     }
 
     /* dynamic styles */
