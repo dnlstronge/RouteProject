@@ -23,6 +23,10 @@ import mmimageC from "../../Assets/ProjectScreens/MoneyMan/3003.png"
 import ucImageA from "../../Assets/ProjectScreens/UCcalc/uc001.png"
 import ucImageB from "../../Assets/ProjectScreens/UCcalc/uc002.png"
 import ucImageC from "../../Assets/ProjectScreens/UCcalc/uc003.png"
+// PC calc
+import pcImageA from "../../Assets/ProjectScreens/PCcalc/pc001.png"
+import pcImageB from "../../Assets/ProjectScreens/PCcalc/pc002.png"
+import pcImageC from "../../Assets/ProjectScreens/PCcalc/pc003.png"
 
 
 //  migrate data to DB w/ FB backend to begin with
@@ -85,7 +89,7 @@ export const pensionCreditCalcData = {
   description: `Pension Credit Calculator: this is another welfare benefit calculator I built using React. It takes the 
   relatively complex logic required to work out pension credit - a means-tested benefit and implements it in a UI I created with react. It returns
   an estimated entitlement to both pension credit and savings credit based on a number of inputs.`,
-  screenShots: [],
+  screenShots: [pcImageA, pcImageB, pcImageC],
   liveDemo: `https://pccalc-3dbcd.web.app/`,
   gitHub: `https://github.com/dnlstronge/pccalc`
 }
