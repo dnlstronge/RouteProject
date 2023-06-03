@@ -1,9 +1,6 @@
 import React from "react"
 import classes from "./Window.module.css"
 
-
-
-
 /* Redux Selector and Types */
 
 import { useSelector } from "react-redux"

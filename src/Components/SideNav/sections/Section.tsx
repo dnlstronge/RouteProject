@@ -12,7 +12,7 @@ import { RootState } from "../../../Store/store"
 import { resetGroupTask } from "../../../Store/sectionsSlice"
 import { resetFetchingApp } from "../../../Store/fetchingSlice"
 import { resetMoneyMan } from "../../../Store/moneyManSlice"
-import { resetUCcalc, setShowUCcalc } from "../../../Store/UCcalcSlice"
+import { resetUCcalc, setShowUCcalc } from "../../../Store/ucCalcSlice"
 
 type sectionProps = {
     key: number,

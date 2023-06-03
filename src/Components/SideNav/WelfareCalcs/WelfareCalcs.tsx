@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { resetFetchingApp } from "../../../Store/fetchingSlice";
 import { resetGroupTask } from "../../../Store/sectionsSlice";
 import { resetMoneyMan } from "../../../Store/moneyManSlice";
-import { resetUCcalc, setShowUCcalc } from "../../../Store/UCcalcSlice";
+import { resetUCcalc, setShowUCcalc } from "../../../Store/ucCalcSlice";
 
 
 

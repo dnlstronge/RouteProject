@@ -2,14 +2,16 @@ import { configureStore } from "@reduxjs/toolkit";
 import sectionsSliceReducer from "./sectionsSlice";
 import fetchingSliceReducer from "./fetchingSlice";
 import moneyManSliceReducer from "./moneyManSlice"
-import ucCalcSliceReducer from "../Store/UCcalcSlice"
+import ucCalcSliceReducer from "./ucCalcSlice"
+import pcCalcSliceReducer from "./pcCalcSlice"
 
 export const store = configureStore({
     reducer: {
         showGroupTask: sectionsSliceReducer,
         showFetchProject: fetchingSliceReducer,
         showMoneyMan: moneyManSliceReducer,
-        showUCcalc: ucCalcSliceReducer
+        showUCcalc: ucCalcSliceReducer,
+        showPCcalc: pcCalcSliceReducer
     }
 })
 
