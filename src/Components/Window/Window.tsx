@@ -1,19 +1,29 @@
 import React from "react"
 import classes from "./Window.module.css"
-import { projectData } from "../Data/Projects"
-import GroupTaskProject from "../Projects/GroupTask/GroupTaskProject"
+
+
+
+
+/* Redux Selector and Types */
+
 import { useSelector } from "react-redux"
 import { RootState } from "../../Store/store"
+
+/* Project FCS */
+import GroupTaskProject from "../Projects/GroupTask/GroupTaskProject"
 import Fetching from "../Projects/Fetching/Fetching"
-import { fetchingProjectData } from "../Data/Projects"
 import MoneyMan from "../Projects/MoneyMan/MoneyMan"
-import { moneyManProjectData } from "../Data/Projects"
 import UCcalc from "../Projects/WACalcs/UCcalc"
+import PCcalc from "../Projects/WACalcs/PCcalc"
+
+/* project data */
+import { projectData } from "../Data/Projects"
+import { fetchingProjectData } from "../Data/Projects"
+import { moneyManProjectData } from "../Data/Projects"
 import { universalCreditCalcData } from "../Data/Projects"
 
 
-
-// import ICONS from master
+/* import ICONS from master */ 
 
 import { 
         reactICON, 
@@ -84,8 +94,17 @@ const Window: React.FC = () => {
                 screenShots={universalCreditCalcData.screenShots}
                 liveDemo={universalCreditCalcData.liveDemo}
                 gitHub={universalCreditCalcData.gitHub}
-                icons={[reactICON, cssICON, html5ICON, javaScriptICON, firebaseICON]}
+                icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
                 /> }
+            <PCcalc
+                id={universalCreditCalcData.id}
+                name={universalCreditCalcData.name}
+                description={universalCreditCalcData.description}
+                screenShots={universalCreditCalcData.screenShots}
+                liveDemo={universalCreditCalcData.liveDemo}
+                gitHub={universalCreditCalcData.gitHub}
+                icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
+                /> 
         </div>
     )
 }

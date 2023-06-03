@@ -24,16 +24,7 @@ gitHub: string
 icons: React.JSX.Element []
 
 } 
-export type fetchingProjectDataType = {
-    id: number,
-    name: string,
-    description: string,
-    screenShots: string[],
-    liveDemo: string,
-    gitHub: string,
-    icons: React.JSX.Element []
 
-}
 
 // subheadings object - 
 // names should correspond with dispatches
