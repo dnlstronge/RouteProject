@@ -65,7 +65,7 @@ const Section: React.FC<sectionProps> = (props) => {
       
       }
             
-    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show, showUcCalc.show])
+    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show])
     return (
 
         <div className={classes.container}>
