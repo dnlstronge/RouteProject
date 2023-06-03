@@ -37,7 +37,7 @@ const WelfareCalcs = () => {
         dispatch(resetFetchingApp())
         dispatch(resetGroupTask())
         dispatch(resetMoneyMan())
-        dispatch(resetPCcalc)
+        dispatch(resetPCcalc())
         setPcActive(false)
         setUcActive(true)
         dispatch(setShowUCcalc())
@@ -59,7 +59,6 @@ const WelfareCalcs = () => {
     return (
         <div className={classes.container}>
             <h4 onClick={handleDropDown} className={classes.title}>Welfare Calculators</h4>
-
             {showCalcs && 
             <>
                 <h4 onClick={handleUCActive} className={ucActiveStyle}>Universal Credit</h4>

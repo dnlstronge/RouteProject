@@ -48,6 +48,7 @@ const Window: React.FC = () => {
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
     const showMoneyMan = useSelector((state: RootState ) => state.showMoneyMan)
     const showUCcalc = useSelector((state: RootState) => state.showUCcalc)
+    const showPCcalc = useSelector((state: RootState) => state.showPCcalc)
 
     return (
         <div className={classes.container}>
@@ -93,6 +94,7 @@ const Window: React.FC = () => {
                 gitHub={universalCreditCalcData.gitHub}
                 icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
                 /> }
+            {showPCcalc.show && 
             <PCcalc
                 id={pensionCreditCalcData.id}
                 name={pensionCreditCalcData.name}
@@ -101,7 +103,7 @@ const Window: React.FC = () => {
                 liveDemo={pensionCreditCalcData.liveDemo}
                 gitHub={pensionCreditCalcData.gitHub}
                 icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
-                /> 
+                /> }
         </div>
     )
 }
