@@ -83,5 +83,9 @@ export const pensionCreditCalcData = {
   id: 2002,
   name: "PC calculator",
   description: `Pension Credit Calculator: this is another welfare benefit calculator I built using React. It takes the 
-  `
+  relatively complex logic required to work out pension credit - a means-tested benefit and implements it in a UI I created with react. It returns
+  an estimated entitlement to both pension credit and savings credit based on a number of inputs.`,
+  screenShots: [],
+  liveDemo: `https://pccalc-3dbcd.web.app/`,
+  gitHub: `https://github.com/dnlstronge/pccalc`
 }
