@@ -70,11 +70,18 @@ export const moneyManProjectData = {
 export const universalCreditCalcData = {
   id: 2001,
   name: "UC calculator",
-  description: `Universal Credit calculator: one of a series of welfare benefit reckoners I have build to work out entitlement. It's front-end logic takes
+  description: `Universal Credit calculator: one of a series of welfare benefit reckoners I have built to work out entitlement. It's front-end logic takes
    user input and provides an estimate based on the claimants circumstances, I built this with primarily with React JS`,
   screenShots: [ucImageA, ucImageB, ucImageC],
   liveDemo: `https://uccalc-11c98.web.app/`,
   gitHub: `https://github.com/dnlstronge/benefitscalc2`,
 
   
+}
+
+export const pensionCreditCalcData = {
+  id: 2002,
+  name: "PC calculator",
+  description: `Pension Credit Calculator: this is another welfare benefit calculator I built using React. It takes the 
+  `
 }
