@@ -17,7 +17,7 @@ import UCcalc from "../Projects/WACalcs/UCcalc"
 import PCcalc from "../Projects/WACalcs/PCcalc"
 
 /* project data */
-import { projectData } from "../Data/Projects"
+import { pensionCreditCalcData, projectData } from "../Data/Projects"
 import { fetchingProjectData } from "../Data/Projects"
 import { moneyManProjectData } from "../Data/Projects"
 import { universalCreditCalcData } from "../Data/Projects"
@@ -97,12 +97,12 @@ const Window: React.FC = () => {
                 icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
                 /> }
             <PCcalc
-                id={universalCreditCalcData.id}
-                name={universalCreditCalcData.name}
-                description={universalCreditCalcData.description}
-                screenShots={universalCreditCalcData.screenShots}
-                liveDemo={universalCreditCalcData.liveDemo}
-                gitHub={universalCreditCalcData.gitHub}
+                id={pensionCreditCalcData.id}
+                name={pensionCreditCalcData.name}
+                description={pensionCreditCalcData.description}
+                screenShots={pensionCreditCalcData.screenShots}
+                liveDemo={pensionCreditCalcData.liveDemo}
+                gitHub={pensionCreditCalcData.gitHub}
                 icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
                 /> 
         </div>
