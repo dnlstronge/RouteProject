@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./PCcalc.module.css"
+import { projectDataTypeObject } from "../../../Models/projectDataTypes";
 
-const PCcalc: React.FC = (props) => {
+const PCcalc: React.FC <projectDataTypeObject>= (props) => {
     return (
         <div className={classes.container}>
             {props.screenShots.map((image => {
