@@ -19,6 +19,10 @@ import fetchImageC from "../../Assets/ProjectScreens/FetchSite/fetch3.png"
 import mmimageA from "../../Assets/ProjectScreens/MoneyMan/3001.png"
 import mmimageB from "../../Assets/ProjectScreens/MoneyMan/3002.png"
 import mmimageC from "../../Assets/ProjectScreens/MoneyMan/3003.png"
+// monstersdb
+import mdbImageA from "../../Assets/ProjectScreens/Monsterdb/mon1.png"
+import mdbImageB from "../../Assets/ProjectScreens/Monsterdb/mon2.png"
+import mdbImageC from "../../Assets/ProjectScreens/Monsterdb/mon3.png"
 // UC calc
 import ucImageA from "../../Assets/ProjectScreens/UCcalc/uc001.png"
 import ucImageB from "../../Assets/ProjectScreens/UCcalc/uc002.png"
@@ -97,10 +101,10 @@ export const pensionCreditCalcData = {
 export const monsterdbData = {
   id: 1004,
   name: "Monsters DB",
-  description: `Fullstack application which interacts with a database of entries. 
-  It allows users create an account and view items which have been uploaded and their stats etc.
-   It allows users with admin rights to upload to the database also.`,
-  screenShots: [pcImageA, pcImageB, pcImageC],
+  description: `Fullstack application which built with React & TypeScript interacts with a database of entries. 
+  It allows users create an account and view items which have been uploaded and their stats etc. I've implemented 
+  authentication and users with admin rights can upload new entries to the db`,
+  screenShots: [mdbImageA, mdbImageB, mdbImageC],
   liveDemo: `https://monsterdb-30be5.web.app/`,
   gitHub: `https://github.com/dnlstronge/monsters-db`
 }

@@ -18,6 +18,7 @@ import { pensionCreditCalcData, projectData } from "../Data/Projects"
 import { fetchingProjectData } from "../Data/Projects"
 import { moneyManProjectData } from "../Data/Projects"
 import { universalCreditCalcData } from "../Data/Projects"
+import { monsterdbData } from "../Data/Projects"
 
 
 /* import ICONS from master */ 
@@ -106,15 +107,15 @@ const Window: React.FC = () => {
                 gitHub={pensionCreditCalcData.gitHub}
                 icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
                 /> }
-            {showPCcalc.show && 
+            {showMonsterDB.show && 
             <Monsterdb
-                id={pensionCreditCalcData.id}
-                name={pensionCreditCalcData.name}
-                description={pensionCreditCalcData.description}
-                screenShots={pensionCreditCalcData.screenShots}
-                liveDemo={pensionCreditCalcData.liveDemo}
-                gitHub={pensionCreditCalcData.gitHub}
-                icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
+                id={monsterdbData.id}
+                name={monsterdbData.name}
+                description={monsterdbData.description}
+                screenShots={monsterdbData.screenShots}
+                liveDemo={monsterdbData.liveDemo}
+                gitHub={monsterdbData.gitHub}
+                icons={[reactICON, javaScriptICON, typeScriptICON, html5ICON, cssICON, firebaseICON]}
                 /> }
         </div>
     )

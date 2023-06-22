@@ -14,6 +14,7 @@ import { resetFetchingApp } from "../../../Store/fetchingSlice"
 import { resetMoneyMan } from "../../../Store/moneyManSlice"
 import { resetUCcalc } from "../../../Store/ucCalcSlice"
 import { resetPCcalc } from "../../../Store/pcCalcSlice"
+import { resetMonsterdb } from "../../../Store/monstersdbSlice"
 
 type sectionProps = {
     key: number,
@@ -31,6 +32,7 @@ const Section: React.FC<sectionProps> = (props) => {
     const showGroupTask = useSelector((state: RootState) => state.showGroupTask)
     const showFetchProject = useSelector((state: RootState) => state.showFetchProject)
     const showMoneyMan = useSelector((state: RootState) => state.showMoneyMan)
+    const showMonsterDB = useSelector((state: RootState) => state.showMonsterDB)
     const showUcCalc = useSelector((state: RootState) => state.showUCcalc)
 
     /* Handlers */
@@ -50,12 +52,14 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("GroupTask App")!.className = classes.subtitleActive
         document.getElementById("Fetching App")!.className = classes.subtitle
         document.getElementById("Expense Tracker")!.className = classes.subtitle
+        document.getElementById("Monster DB")!.className = classes.subtitle
       
       } 
       if(showFetchProject.show) {
         document.getElementById("Fetching App")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Expense Tracker")!.className = classes.subtitle
+        document.getElementById("Monster DB")!.className = classes.subtitle
    
         
       }
@@ -63,10 +67,17 @@ const Section: React.FC<sectionProps> = (props) => {
         document.getElementById("Expense Tracker")!.className = classes.subtitleActive
         document.getElementById("GroupTask App")!.className = classes.subtitle
         document.getElementById("Fetching App")!.className = classes.subtitle
+        document.getElementById("Monster DB")!.className = classes.subtitle
       
       }
+      if(showMonsterDB.show) {
+        document.getElementById("Monster DB")!.className = classes.subtitleActive
+        document.getElementById("Expense Tracker")!.className = classes.subtitle
+        document.getElementById("GroupTask App")!.className = classes.subtitle
+        document.getElementById("Fetching App")!.className = classes.subtitle
+      }
             
-    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show])
+    }, [showGroupTask.show, showFetchProject.show, showMoneyMan.show, showMonsterDB.show])
     return (
 
         <div className={classes.container}>
@@ -81,6 +92,7 @@ const Section: React.FC<sectionProps> = (props) => {
                             dispatch(resetMoneyMan())
                             dispatch(resetUCcalc())
                             dispatch(resetPCcalc())
+                            dispatch(resetMonsterdb())
                             // - action
                             dispatch(item.dispatch())
                         }

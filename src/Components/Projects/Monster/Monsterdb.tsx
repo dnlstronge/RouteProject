@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./MoneyMan.module.css"
+import classes from "./Monsterdb.module.css"
 import { projectDataTypeObject } from "../../../Models/projectDataTypes"; // props type
 
 
