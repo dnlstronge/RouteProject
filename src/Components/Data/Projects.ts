@@ -93,3 +93,14 @@ export const pensionCreditCalcData = {
   liveDemo: `https://pccalc-3dbcd.web.app/`,
   gitHub: `https://github.com/dnlstronge/pccalc`
 }
+
+export const monsterdbData = {
+  id: 1004,
+  name: "Monsters DB",
+  description: `Fullstack application which interacts with a database of entries. 
+  It allows users create an account and view items which have been uploaded and their stats etc.
+   It allows users with admin rights to upload to the database also.`,
+  screenShots: [pcImageA, pcImageB, pcImageC],
+  liveDemo: `https://monsterdb-30be5.web.app/`,
+  gitHub: `https://github.com/dnlstronge/monsters-db`
+}

@@ -12,7 +12,8 @@ import { RootState } from "../../../Store/store"
 import { resetGroupTask } from "../../../Store/sectionsSlice"
 import { resetFetchingApp } from "../../../Store/fetchingSlice"
 import { resetMoneyMan } from "../../../Store/moneyManSlice"
-import { resetUCcalc, setShowUCcalc } from "../../../Store/ucCalcSlice"
+import { resetUCcalc } from "../../../Store/ucCalcSlice"
+import { resetPCcalc } from "../../../Store/pcCalcSlice"
 
 type sectionProps = {
     key: number,
@@ -79,6 +80,7 @@ const Section: React.FC<sectionProps> = (props) => {
                             dispatch(resetFetchingApp())
                             dispatch(resetMoneyMan())
                             dispatch(resetUCcalc())
+                            dispatch(resetPCcalc())
                             // - action
                             dispatch(item.dispatch())
                         }

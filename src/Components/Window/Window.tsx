@@ -34,6 +34,7 @@ import {
         firebaseICON,
     
     } from "../Icons/icons"
+import Monsterdb from "../Projects/Monster/Monsterdb"
 
 
 
@@ -49,6 +50,7 @@ const Window: React.FC = () => {
     const showMoneyMan = useSelector((state: RootState ) => state.showMoneyMan)
     const showUCcalc = useSelector((state: RootState) => state.showUCcalc)
     const showPCcalc = useSelector((state: RootState) => state.showPCcalc)
+    const showMonsterDB = useSelector((state: RootState) => state.showMonsterDB)
 
     return (
         <div className={classes.container}>
@@ -96,6 +98,16 @@ const Window: React.FC = () => {
                 /> }
             {showPCcalc.show && 
             <PCcalc
+                id={pensionCreditCalcData.id}
+                name={pensionCreditCalcData.name}
+                description={pensionCreditCalcData.description}
+                screenShots={pensionCreditCalcData.screenShots}
+                liveDemo={pensionCreditCalcData.liveDemo}
+                gitHub={pensionCreditCalcData.gitHub}
+                icons={[reactICON, javaScriptICON,  html5ICON, cssICON, firebaseICON]}
+                /> }
+            {showPCcalc.show && 
+            <Monsterdb
                 id={pensionCreditCalcData.id}
                 name={pensionCreditCalcData.name}
                 description={pensionCreditCalcData.description}

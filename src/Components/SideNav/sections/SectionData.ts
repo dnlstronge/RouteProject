@@ -5,6 +5,7 @@ import { setShowGroupTask } from "../../../Store/sectionsSlice"
 import { setShowFetchingApp } from "../../../Store/fetchingSlice"
 import { setShowMoneyMan } from "../../../Store/moneyManSlice"
 import { setShowUCcalc } from "../../../Store/UCcalcSlice"
+import { setShowMonsterdb } from "../../../Store/monstersdbSlice"
 
 
 export type SectionDataModel = {
@@ -25,7 +26,9 @@ export const SectionData: SectionDataModel = [
         subheadings: [ 
             {name: "GroupTask App", dispatch: setShowGroupTask}, 
             {name: "Fetching App", dispatch: setShowFetchingApp},
-            {name: "Expense Tracker", dispatch: setShowMoneyMan } ]
+            {name: "Expense Tracker", dispatch: setShowMoneyMan },
+            {name: "Monster DB", dispatch: setShowMonsterdb }
+        ]
         
     },
     // {

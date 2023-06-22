@@ -4,6 +4,7 @@ import fetchingSliceReducer from "./fetchingSlice";
 import moneyManSliceReducer from "./moneyManSlice"
 import ucCalcSliceReducer from "./ucCalcSlice"
 import pcCalcSliceReducer from "./pcCalcSlice"
+import monsterdbSlicereducer from "./monstersdbSlice"
 
 export const store = configureStore({
     reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
         showFetchProject: fetchingSliceReducer,
         showMoneyMan: moneyManSliceReducer,
         showUCcalc: ucCalcSliceReducer,
-        showPCcalc: pcCalcSliceReducer
+        showPCcalc: pcCalcSliceReducer,
+        showMonsterDB: monsterdbSlicereducer
     }
 })
 
