@@ -41,6 +41,7 @@ const Section: React.FC<sectionProps> = (props) => {
         dispatch(resetGroupTask())
         dispatch(resetFetchingApp())
         dispatch(resetMoneyMan())
+        dispatch(resetMonsterdb())
     }
     /* 
        Conditional/animation Style (sets subheading background color) 
